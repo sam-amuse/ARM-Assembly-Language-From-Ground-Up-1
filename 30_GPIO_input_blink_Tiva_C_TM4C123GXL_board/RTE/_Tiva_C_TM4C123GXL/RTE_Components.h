@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'GPIO_blink_BSRR_nucleo_board' 
- * Target:  'Nucleo-f446RE' 
+ * Project: 'GPIO_input_blink_Tiva_C_TM4C123GXL_board' 
+ * Target:  'Tiva C TM4C123GXL' 
  */
 
 #ifndef RTE_COMPONENTS_H
@@ -14,10 +14,8 @@
 /*
  * Define the Device Header File: 
  */
-#define CMSIS_device_header "stm32f4xx.h"
+#define CMSIS_device_header "TM4C123.h"
 
-/* Keil::Device:Startup:2.6.3 */
-#define RTE_DEVICE_STARTUP_STM32F4XX    /* Device Startup for STM32F4 */
 
 
 #endif /* RTE_COMPONENTS_H */
