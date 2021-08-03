@@ -1,0 +1,19 @@
+Debug procedure : https://developer.arm.com/documentation/ka002847/latest
+ 
+
+
+.\Objects\FIFO.axf: Error: L6286E: Relocation #REL:0 in fifo.o(fifo) with respect to Fifo. Value(0x17fffe3c) out of range(0 - 0xfff) for (R_ARM_THM_PC12)
+.\Objects\FIFO.axf: Error: L6286E: Relocation #REL:1 in fifo.o(fifo) with respect to PutPt. Value(0x17fffdd4) out of range(0 - 0xfff) for (R_ARM_THM_PC12)
+.\Objects\FIFO.axf: Error: L6286E: Relocation #REL:2 in fifo.o(fifo) with respect to GetPt. Value(0x17fffdd4) out of range(0 - 0xfff) for (R_ARM_THM_PC12)
+
+      0  0x00000000   54 R_ARM_THM_PC12           14 Fifo                     #1 'DATA'
+      1  0x00000060   54 R_ARM_THM_PC12           12 PutPt                    #1 'DATA'
+      2  0x00000066   54 R_ARM_THM_PC12           13 GetPt                    #1 'DATA'
+	  
+    Fifo_Init
+        0x00000000:    f85f0004    _...    LDR      r0,Fifo
+
+    Fifo_Size
+        0x00000060:    f85f1004    _...    LDR      r1,PutPt
+	...
+        0x00000066:    f85f2004    _..     LDR      r2,GetPt	
