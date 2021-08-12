@@ -69,7 +69,7 @@ NotFull	STRB	R0, [R2]				; add the current element
 		BX 		LR						
 
 Fifo_Get
-		PUSH	{R4, R5, LR}
+		PUSH	{R4, R5,R6,R7,LR}
 		LDR		R1, = PutPt
 		LDR		R1, [R1]				; load put pointer address in R1
 		LDR		R2, = GetPt
@@ -95,7 +95,7 @@ N_Empty LDRSB	R4, [R3]				; retrieve/load the FIFO element pointed by GetPt into
 		MOV		R7, #0
 		STR 	R7, [R6]				; set the flag to 0, Tail wrapped
 NoWrap2 STR		R3, [R2]				; load the new GetPt address that has been incremented or wrapped around
-done	POP		{R4, R5, PC}
+done	POP		{R4, R5,R6,R7, PC}
 	
 	
 Fifo_Size
